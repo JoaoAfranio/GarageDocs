@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Ionic Blank
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="background-img">
+    <ion-card *ngFor="let veiculo of veiculo | async">
+      <ion-card-header>
+        <div class="titulo">
+          <span>{{veiculo.placa}} - {{veiculo.modelo}}</span>
+        </div>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <p><b>Valor: </b> R$ {{veiculo.valor}}</p>
+        <p><b>Ano: </b>{{veiculo.ano_fabricacao}}</p>
+        <p><b>Ano do Modelo: </b>{{veiculo.ano_modelo}}</p>
+        
+      </ion-card-content>
+  
+      <ion-grid>
+          <ion-row justify-content-center justify-content-around>
+            <ion-col col-3>
+              <button  ion-button color="primary" clear icon-only (click)="editveiculo(veiculo)">
+                <ion-icon ios="md-create" md="md-create"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-3>
+              <button ion-button color="danger" clear icon-only (click)="deleteveiculo(veiculo.id)">
+                <ion-icon ios='md-trash' name='md-trash'></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card>
+  
+  </ion-content>
+  

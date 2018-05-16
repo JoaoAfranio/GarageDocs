@@ -1,20 +1,25 @@
 import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
 
-import { HomePage } from '../home/home';
-import { SearchPage } from '../search/search';
-import { CadastroPage } from '../cadastro/cadastro';
+/**
+ * Generated class for the TabsPage tabs.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
-
+@IonicPage()
 @Component({
+  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = SearchPage;
-  tab2Root = HomePage;
-  tab3Root = CadastroPage;
+  homeRoot = 'HomePage'
+  pesquisarRoot = 'PesquisarPage'
+  adicionarRoot = 'CriarVeiculoPage'
 
-  constructor() {
 
-  }
+  constructor(public navCtrl: NavController) {}
+
 }

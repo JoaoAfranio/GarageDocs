@@ -1,35 +1,41 @@
 <ion-header>
     <ion-navbar>
       <ion-title>
-        Pesquisar
+        Gerenciar Pessoa
       </ion-title>
     </ion-navbar>
   </ion-header>
   
   <ion-content padding class="background-img" >
-    <ion-card *ngFor="let veiculo of veiculo | async">
+    <ion-card *ngFor="let pessoa of pessoa | async">
       <ion-card-header>
         <div class="titulo">
-          <span>{{veiculo.placa}} - {{veiculo.modelo}}</span>
+          <span>{{pessoa.nome}} - {{pessoa.idade}} anos</span>
         </div>
       </ion-card-header>
-  
+
+      <div class="h2">
+  <h2>Endereço</h2>
+      </div>
+
       <ion-card-content>
-        <p><b>Valor: </b> R$ {{veiculo.valor}}</p>
-        <p><b>Ano: </b>{{veiculo.ano_fabricacao}}</p>
-        <p><b>Ano do Modelo: </b>{{veiculo.ano_modelo}}</p>
+        <p><b>Rua: </b> {{pessoa.rua}}</p> 
+        <p><b>Número: </b>{{pessoa.numero}}</p>      
+        <p><b>Bairro: </b>{{pessoa.bairro}}</p>        
+        <p><b>Cidade: </b>{{pessoa.cidade}}</p>
+        <p><b>Telefone: </b><u>{{pessoa.telefone}}</u></p>
         
       </ion-card-content>
   
       <ion-grid>
           <ion-row justify-content-center justify-content-around>
             <ion-col col-3>
-              <button  ion-button color="primary" clear icon-only (click)="editveiculo(veiculo)">
+              <button  ion-button color="primary" clear icon-only (click)="editpessoa(pessoa)">
                 <ion-icon ios="md-create" md="md-create"></ion-icon>
               </button>
             </ion-col>
             <ion-col col-3>
-              <button ion-button color="danger" clear icon-only (click)="deleteveiculo(veiculo.id)">
+              <button ion-button color="danger" clear icon-only (click)="deletepessoa(pessoa.id)">
                 <ion-icon ios='md-trash' name='md-trash'></ion-icon>
               </button>
             </ion-col>

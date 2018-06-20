@@ -40,7 +40,7 @@ export class EditarveiculoComponent {
       cor: [null, [Validators.required]],
       marca: [null, [Validators.required]],
       modelo: [null, [Validators.required]],
-      pessoa_vinculada: [null, [Validators.required]],
+     /* pessoa_vinculada: [null], */
       placa: [null, [Validators.required]],
       renavam: [null, [Validators.required]],
       valor: [null, [Validators.required]],
@@ -61,7 +61,7 @@ export class EditarveiculoComponent {
       cor: this.veiculo.cor,
       marca: this.veiculo.marca,
       modelo: this.veiculo.modelo,
-      pessoa_vinculada: this.veiculo.pessoa_vinculada,
+      /*pessoa_vinculada: this.veiculo.pessoa_vinculada, */
       placa: this.veiculo.placa,
       renavam: this.veiculo.renavam,
       valor: this.veiculo.valor,
@@ -84,7 +84,7 @@ export class EditarveiculoComponent {
       cor: this.formEditar.value.cor,
       marca: this.formEditar.value.marca,
       modelo: this.formEditar.value.modelo,
-      pessoa_vinculada: this.formEditar.value.pessoa_vinculada,
+     /* pessoa_vinculada: this.formEditar.value.pessoa_vinculada, */
       placa: this.formEditar.value.placa,
       renavam: this.formEditar.value.renavam,
       valor: this.formEditar.value.valor,
@@ -94,7 +94,7 @@ export class EditarveiculoComponent {
 
     this.veiculoCollection.doc(this.formEditar.value.id).update(this.formEditar.value).then((res)=>{
       this.loading.dismiss()
-      this.mostraMenssagem('veiculo editado com sucesso', 2500)
+      this.mostraMenssagem('Veículo editado com sucesso', 2500)
       this.view.dismiss();
     })
   }

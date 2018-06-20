@@ -1,9 +1,18 @@
 page-criar-veiculo {
   .form{
-    width: 95%;
+    width: 100%;
+    padding-bottom: 15%;
   }
 
-  .background-img{
-    background-position: center top;
+  .content{
+    overflow: auto;
+  }
+
+  .button-cadastrar{
+    text-align: center;
+  }
+
+  .button-cad{
+    width: 60%;
   }
 }

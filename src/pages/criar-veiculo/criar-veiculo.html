@@ -13,9 +13,9 @@
 </ion-header>
 
 
-<ion-content padding >
+<ion-content id="content" >
 
-  <form [formGroup]="formVeiculo" padding (ngSubmit)="submit(); $event.preventDefault()" ion-fixed class="form">
+  <form [formGroup]="formVeiculo" (ngSubmit)="submit(); $event.preventDefault()" ion-fixed class="form">
 
     <ion-list no-lines>
       <ion-item *ngIf="error">
@@ -66,11 +66,10 @@
     </ion-item>
   
 
- 
 
   <ion-item>
     <ion-label floating>Renavam</ion-label>
-    <ion-input type="number" formControlName="renavam" ionic-password-show-hide></ion-input>
+    <ion-input type="text" spellcheck="false" autocapitalize="off" formControlName="renavam"></ion-input>
   </ion-item>
   <ion-item *ngIf="formVeiculo.get('renavam').errors && formVeiculo.get('renavam').dirty">
     <p *ngIf="formVeiculo.get('renavam').hasError('required')">Campo obrigatório</p>
@@ -96,15 +95,6 @@
 
 
 <ion-item>
-  <ion-label floating>Pessoa Vinculada</ion-label>
-  <ion-input type="text" spellcheck="false" autocapitalize="off" formControlName="pessoa_vinculada" ></ion-input>
-</ion-item>
-<ion-item *ngIf="formVeiculo.get('pessoa_vinculada').errors && formVeiculo.get('pessoa_vinculada').dirty">
-  <p *ngIf="formVeiculo.get('pessoa_vinculada').hasError('required')">Campo obrigatório</p>
-</ion-item>
-
-
-<ion-item>
   <ion-label floating>Valor da Compra</ion-label>
   <ion-input type="number" formControlName="valor_compra" ionic-password-show-hide></ion-input>
 </ion-item>
@@ -112,8 +102,8 @@
   <p *ngIf="formVeiculo.get('valor_compra').hasError('required')">Campo obrigatório</p>
 </ion-item>
 </ion-list>
-
-    <button ion-button full type="submit" [disabled]="formVeiculo.invalid">Enviar</button>
-
+  <div class="button-cadastrar">
+    <button class="button-cad" ion-button type="submit" >Enviar</button>
+  </div>  
   </form>
 </ion-content>

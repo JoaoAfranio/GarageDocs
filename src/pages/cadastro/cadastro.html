@@ -7,15 +7,27 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Cadastro</ion-title>
+    <ion-title>Cadastrar</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="background-img">
   <div text-center>
-    <button (click)="transferirPaginaVeiculo()" ion-button>Cadastrar Veículo</button>
-    <button (click)="transferirPaginaPessoa()"ion-button>Cadastrar Pessoa</button>
-  </div>
+    <ion-buttons style="margin-top: 15%;">
+    <button button (click)="transferirPaginaPessoa()"  ion-button icon-start color="dark">
+          <ion-icon name="person"></ion-icon>
+          Cadastrar Pessoa
+      </button>
+        
+      <button (click)="transferirPaginaVeiculo()" ion-button icon-start color="dark">
+            <ion-icon name="car"></ion-icon>
+            Cadastrar Veículo
+      </button>
+    </ion-buttons>
+</div>
+      
 </ion-content>
+      
+

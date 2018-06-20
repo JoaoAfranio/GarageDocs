@@ -38,7 +38,6 @@ export class CriarVeiculoPage {
       cor: [null, [Validators.required]],
       marca: [null, [Validators.required]],
       modelo: [null, [Validators.required]],
-      pessoa_vinculada: [null, [Validators.required]],
       placa: [null, [Validators.required]],
       renavam: [null, [Validators.required]],
       valor: [null, [Validators.required]],
@@ -64,7 +63,6 @@ export class CriarVeiculoPage {
       cor: this.formVeiculo.value.cor,
       marca: this.formVeiculo.value.marca,
       modelo: this.formVeiculo.value.modelo,
-      pessoa_vinculada: this.formVeiculo.value.pessoa_vinculada,
       placa: this.formVeiculo.value.placa,
       renavam: this.formVeiculo.value.renavam,
       valor: this.formVeiculo.value.valor,
@@ -74,7 +72,7 @@ export class CriarVeiculoPage {
 
     this.veiculoCollection.doc(id).set(this.formVeiculo.value).then((res)=>{
       this.loading.dismiss()
-      this.mostraMenssagem('veiculo criado com sucesso', 2500)
+      this.mostraMenssagem('Veículo criado com sucesso', 2500)
       this.navCtrl.setRoot(HomePage)
     })
   }

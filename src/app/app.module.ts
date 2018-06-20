@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from './../pages/tabs/tabs';
 
 import { EditarveiculoComponent } from '../components/editar-veiculo/editar-veiculo'
+import { EditarpessoaComponent } from './../components/editar-pessoa/editar-pessoa';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -22,7 +23,8 @@ import { HomePageModule } from '../pages/home/home.module';
     MyApp, 
 //  HomePage,
     TabsPage,
-    EditarveiculoComponent
+    EditarveiculoComponent,
+    EditarpessoaComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { HomePageModule } from '../pages/home/home.module';
     MyApp,
     HomePage,
     TabsPage,
-    EditarveiculoComponent
+    EditarveiculoComponent,
+    EditarpessoaComponent,
   ],
   providers: [
     StatusBar,

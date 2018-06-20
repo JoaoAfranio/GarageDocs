@@ -17,7 +17,7 @@ export class TabsPage {
 
   homeRoot = 'HomePage'
   pesquisarRoot = 'PesquisarPage'
-  adicionarRoot = 'CriarVeiculoPage'
+  adicionarRoot = 'CadastroPage'
 
 
   constructor(public navCtrl: NavController) {}

@@ -1,7 +1,8 @@
-import { AddPessoaPage } from './../add-pessoa/add-pessoa';
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AddVeiculoPage } from '../addVeiculo/addVeiculo';
+import { CriarVeiculoPage } from '../criar-veiculo/criar-veiculo';
+import { CriarPessoaPage } from '../criar-pessoa/criar-pessoa';
 
 @IonicPage()
 @Component({
@@ -17,10 +18,11 @@ export class CadastroPage {
     console.log('ionViewDidLoad CadastroPage');
   }
 
-  transferirPaginaPessoa(){
-    this.navCtrl.push(AddPessoaPage);
-  }
   transferirPaginaVeiculo(){
-    this.navCtrl.push(AddVeiculoPage);
+    this.navCtrl.push('CriarVeiculoPage');
+  }
+
+  transferirPaginaPessoa(){
+    this.navCtrl.push('CriarPessoaPage');
   }
 }

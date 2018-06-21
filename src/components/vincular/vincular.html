@@ -1,0 +1,37 @@
+<ion-header id="header">
+  <ion-navbar>
+    <ion-title>Vincular Veículo</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only clear color="dark" (click)="closeModal()">
+        <ion-icon name="md-close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="content" no-bounce>
+  <form [formGroup]="formVincular" (ngSubmit)="concluir()">  
+    <ion-item>
+      <ion-label>Carro</ion-label>
+      <ion-select [(ngModel)]="selectedCarro"  [ngModelOptions]="{standalone: true}">
+        
+        <ion-option  *ngFor="let veiculo of veiculo | async" value="{{veiculo.placa}}">{{veiculo.placa}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+  
+
+    <ion-item>
+      <ion-label>Pessoa</ion-label>
+      <ion-select [(ngModel)]="selectedPessoa" [ngModelOptions]="{standalone: true}"> 
+
+    <ion-option *ngFor="let pessoa of pessoa | async" value="{{pessoa.nome}}">{{pessoa.nome}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <button ion-button style="margin-top: 15%" full type="submit" >Concluir</button>
+  </form>
+
+
+</ion-content>

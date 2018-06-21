@@ -55,18 +55,18 @@ export class EditarpessoaComponent {
 
     this.formEditar.setValue({
       id: this.pessoa.id,
-      bairro: this.pessoa.value.bairro,
-      cep: this.pessoa.value.cep,
-      cidade: this.pessoa.value.cidade,
-      complemento: this.pessoa.value.complemento,
-      cpf: this.pessoa.value.cpf,
-      estado: this.pessoa.value.estado,
-      idade: this.pessoa.value.idade,
-      nome: this.pessoa.value.nome,
-      numero: this.pessoa.value.numero,
-      rua: this.pessoa.value.rua,
-      sexo: this.pessoa.value.sexo,
-      telefone: this.pessoa.value.telefone,
+      bairro: this.pessoa.bairro,
+      cep: this.pessoa.cep,
+      cidade: this.pessoa.cidade,
+      complemento: this.pessoa.complemento,
+      cpf: this.pessoa.cpf,
+      estado: this.pessoa.estado,
+      idade: this.pessoa.idade,
+      nome: this.pessoa.nome,
+      numero: this.pessoa.numero,
+      rua: this.pessoa.rua,
+      sexo: this.pessoa.sexo,
+      telefone: this.pessoa.telefone,
      
     })
 

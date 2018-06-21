@@ -69,7 +69,7 @@
             <ion-item *ngIf="formEditar.get('rua').errors && formEditar.get('rua').dirty">
               <p *ngIf="formEditar.get('rua').hasError('required')">Campo obrigatório</p>
             </ion-item>
-      
+ 
             <ion-item>
                 <ion-label floating>Bairro</ion-label>
                 <ion-input type="text" spellcheck="false" autocapitalize="off" formControlName="bairro"></ion-input>
@@ -77,7 +77,7 @@
               <ion-item *ngIf="formEditar.get('bairro').errors && formEditar.get('bairro').dirty">
                 <p *ngIf="formEditar.get('bairro').hasError('required')">Campo obrigatório</p>
               </ion-item>
-      
+
             <ion-item>
               <ion-label floating>Número</ion-label>
               <ion-input type="text" spellcheck="false" autocapitalize="off" formControlName="numero"></ion-input>

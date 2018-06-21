@@ -1,3 +1,4 @@
+import { VincularComponent } from './../components/vincular/vincular';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -25,6 +26,7 @@ import { HomePageModule } from '../pages/home/home.module';
     TabsPage,
     EditarveiculoComponent,
     EditarpessoaComponent,
+    VincularComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { HomePageModule } from '../pages/home/home.module';
     TabsPage,
     EditarveiculoComponent,
     EditarpessoaComponent,
+    VincularComponent
   ],
   providers: [
     StatusBar,
